@@ -42,6 +42,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber'
   gem 'responders'
+  gem 'jquery-rails'
   gem 'bootstrap-sass'
   gem 'angularjs-rails'
 end
