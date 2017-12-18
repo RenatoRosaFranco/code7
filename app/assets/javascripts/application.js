@@ -16,3 +16,53 @@
 //= require angular
 //= require turbolinks
 //= require_tree .
+
+var app = angular.module('app', []);
+app.controller('ApplicationController', function(){
+
+});
+
+app.controller('ClientsController', ['$http', '$log', function($http, $log){
+    var code7even = this;
+    code7even.members || [];
+
+    $http({
+        url: 'api/v1/clients.json',
+        method: 'GET'
+    }).then(function (response){
+      code7even.members = response.data
+      console.log(response.data);
+    }).then(function (error){
+      console.log(error);
+    })
+}]);
+
+app.controller('MembersController', ['$http', '$log', function($http, $log){
+   var code7even = this;
+   code7even.members || [];
+
+   $http({
+     url: 'api/v1/members.json',
+     method: 'GET'
+   }).then(function (response){
+     code7even.members = response.data;
+     console.log(response.data);
+  }).then(function (error){
+     console.log(error);
+ });
+}]);
+
+app.controller('ServicesController', ['$http', '$log', function($http, $log){
+  var code7even = this;
+  code7even.members || [];
+
+  $http({
+    url: 'api/v1/services.json',
+    method: 'GET'
+  }).then(function (response){
+    code7even.services = response.data;
+    console.log(response.data);
+  }).then(function (error){
+    console.log(error);
+  });
+}]);

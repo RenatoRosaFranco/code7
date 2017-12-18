@@ -1,1 +1,36 @@
 <% provide :title, "Home" %>
+
+
+<section id='home' class='jumbotron'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <ul class='list-unstyled text-center'>
+             <li><h1>CODE7EVEN</h1></li>
+             <li><p>Código rápido e eficaz para seu negócio.</p></li>
+             <ul class='list-unstyled'>
+                <li><%=  link_to 'Home', '', class: 'btn btn-primary btn-lg top' %></li>
+             </ul>
+          </ul><!-- list-unstyled -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='contact'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+           <ul class='list-unstyled text-center'>
+               <li><h2> <i class='glyphicon glyphicon-search'></i> CONTATO</h2></li>
+               <li><p>Entre em contato conosco.</p></li>
+               <li><hr></li>
+           </ul><!-- list-unstyled -->
+
+           <%= render partial: 'contact/form' %>
+
+      </div>
+    </div>
+  </div>
+</section>
