@@ -48,6 +48,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'devise'
   gem 'rails_best_practices'
+  gem 'factory_bot'
+  gem 'ffaker'
+  gem 'rails_admin'
 end
 
 group :development do
