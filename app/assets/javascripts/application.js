@@ -52,6 +52,10 @@ app.controller("MembersController", ['$http', '$log', function($http, $log){
   });
 }]);
 
+app.controller('NewsletterController', ['$scope, $http', '$log', function($http, $scope, $log){
+  var code7even = this;
+}]);
+
 app.controller('PartnersController', ['$http', '$log', function($http, $log){
     var code7even = this;
     code7even.partners = [];
@@ -66,6 +70,7 @@ app.controller('PartnersController', ['$http', '$log', function($http, $log){
       console.log(error);
     });
 }]);
+
 
 app.controller('ServicesController', ['$http', '$log', function($http, $log){
   var code7even = this;
