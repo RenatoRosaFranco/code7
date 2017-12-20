@@ -12,24 +12,409 @@
                 <li><%=  link_to 'Home', '', class: 'btn btn-primary btn-lg top' %></li>
              </ul>
           </ul><!-- list-unstyled -->
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- home -->
+
+<section id='about'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled'>
+           <li><h2><strong>EMPRESA</strong></h2></li>
+           <li><p>Conheça a nossa empresa.</p></li>
+           <li><hr></li>
+        </ul><!-- list-unstyled -->
+
+        <p>
+          A <strong>CODE7EVEN</strong> surgiu de uma startup facultativa, no inicio
+          era apenas um projeto de agencia digital, hoje tornou-se um Software House
+          que propoõem a seus clientes as melhores soluções no campo da tecnologia a
+          um preço acessivel. Não nos limitando apenas ao atendimento a clientes locais
+          , também atendemos clientes no exterior, nossas soluções são implementadas através
+          da agilidade, qualidade, e praticidade assim propondo a nossos clientes um serviço
+          confiável e transparente.
+        </p>
+
+        <ul class='list-unstyled text-center'>
+           <li><h2><strong>VALORES</strong></h2></li>
+           <li>Conheça os valores que torna a nossa empresa única.</li>
+           <li><hr></li>
+        </ul><!-- list-unstyled -->
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h4><strong>COMPROMISSO</strong></h4></li>
+               <li><p>Temos compromisso com os ideais de nossos
+               clientes, nos comunicando com os mesmos de maneira
+               integra e honesta.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-6 -->
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+              <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+              <li><h4><strong>INOVAÇÃO</strong></h4></li>
+              <li><p>Temos como objetivo principal a inovação no
+              ramo da tecnologia, nossa filosofia é tornar o mundo
+              um lugar melhor para as pessoas atráves da mesma.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-6 -->
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h4><strong>TRABALHO EM EQUIPE</strong></h4></li>
+               <li><p>Temos uma equipe totalmente qualificada
+               trabalhando em conjunto para criar soluções
+               eficazes a nossos clientes.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-6 -->
+
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+                <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+                <li><h4><strong>SOCIEDADE</strong></h4></li>
+                <li><p>Temos o prazer de patrocinar, dar suporte ou
+                apoiar eventos sociais que tenham como meta o crescimento
+               intectual e cultural da sociedade.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-6 -->
+
+        <div class="col-md-4 col-md-offset-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h4><strong>EDUCAÇÃO E FORMAÇÃO</strong></h4></li>
+               <li><p>Encorajamos e apoiamos os nossos colaboradores a
+               se qualificarem cada vez mais, aprimorando assim as nossas
+               soluções.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-6 -->
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- about -->
+
+
+<section id="services" ng-controller="ServicesController as serviceCtrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <ul class='list-unstyled text-center'>
+             <li><h2><strong>SERVIÇOS</strong></h2></li>
+             <li><p>Nós temos a solução ideal para você.</p></li>
+             <li><hr></li>
+          </ul><!-- list-unstyled -->
+
+          <div ng-repeat='service in serviceCtrl.services' class="service col-md-4">
+             <div class="media panel panel-default">
+                <div class="media-middle media-left">
+                   <img ng-src="{{ service.logo }}">
+                </div>
+                <div class="media-body">
+                    <h4 class='media-header'>{{ service.name }}</h4>
+                    <p>{{ service.description }}</p>
+                </div>
+             </div>
+          </div>
+
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- services -->
+
+<section id='members' ng-controller='MembersController as memberCtrl'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled text-center'>
+          <li><h2><strong>Equipe</strong></h2></li>
+          <li><p>Os melhores profissionais trabalhando por você.</p></li>
+          <li><hr></li>
+        </ul><!-- list-unstyled -->
+
+        <div class="col-md-4">
+             <h4><strong>Seu projeto em boas mãos</strong></h4>
+             <p>
+               Temos uma equipe totalmente qualificada para lhe
+               atender independente de sua necessidade, nossos colaboradores
+               são expecialistas em seus ambientes de trabalho, levando assim
+               nossos clientes, qualidade  e excelência no serviço prestado.
+               Venha conhecer um pouco mais sobre nossa equipe.
+             </p>
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-8">
+            <div class=".member col-md-4" ng-controller='member in memberCtrl.members'>
+               <div class="panel panel-default">
+                  <ul class='list-unstyled padding'>
+                     <li><h4>{{ member.name }}</h4></li>
+                     <li><p>{{ member.description }}</p></li>
+                     <li><span class='badge'>{{ member.role }}</span></li>
+                  </ul><!-- list-unstyled -->
+               </div><!--  panel panel-default -->
+            </div><!-- col-md-4 -->
+        </div><!-- col-md-8 -->
       </div>
     </div>
   </div>
 </section>
+
+<section id='octa' class='jumbotron'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled text-center'>
+           <li><h1><strong>OCTA7</strong></h1></li>
+           <li><p>Temos as melhores soluções mobile para você.</p></li>
+           <li><hr></li>
+        </ul><!-- list-unstyled -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding'>
+               <li><h4><strong>Estrátegia Digital</strong></h4></li>
+               <li><p>Desenvolvemos toda a campanha visual e
+               digital para seu produto mobile ou web.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding'>
+               <li><h4><strong>Desenvolvimento</strong></h4></li>
+               <li><p>Desenvolvemos soluções em aplicativos mobile
+                 para Android, IOS e Windows phone.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding'>
+               <li><h4><strong>UX | UI</strong></h4></li>
+               <li><p>Projetamos uma expêriencia de usuario que vai
+                 alem do bom funcionamento de aplicações.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-6 col-md-offset-3">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+               <li><h3><strong>SEU PRODUTO WEB EM QUALQUER LUGAR</strong></h3></li>
+               <li><p>Seja em computadores, notebooks, tablets & celulares
+                 inicie agora um tour e conte-nos sobre seu produto, para auxiliarmos
+                 da melhor forma encontrando as soluções mais acessíveis.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='labs'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+         <ul class='list-unstyled text-center'>
+            <li><h2><strong>CODE7 LABS</strong></h2></li>
+            <li><p>Você procura uma carreia promissora?, podemos lhe ajudar a chegar lá.</p></li>
+            <li><hr></li>
+         </ul><!-- list-unstyled -->
+
+         <div class="col-md-3">
+           <div class="panel panel-default">
+             <ul class='list-unstyled text-center padding'>
+                <li><h1 class='glyphicon glyphicon-search'></h1></li>
+                <li><h4><strong>Formação Interna</strong></h4></li>
+                <li><p>Propomos a nossos colaboradores a entender toda a filosofia
+                de uma empresa e processos que levam o desenvolvimento de produtos
+                de qualidade, tambem são ensinados principios como Ágile, Lean Kanban
+                e Scrum utilizados para o desenvolvimento e entrega de softwares.</p></li>
+             </ul><!-- list-unstyled -->
+           </div><!-- panel panel-default -->
+         </div><!-- col-md-3 -->
+
+         <div class="col-md-3">
+           <div class="panel panel-default">
+              <ul class='list-unstyled text-center padding'>
+                 <li><h1 class='glyphicon glyphicon-search'></h1></li>
+                 <li><h4><strong>Workshops & Palestras</strong></h4></li>
+                 <li><p>Propomos ao final de cada semana, workshops e palestras
+                 dentro da empresa, para que sejam discutidos assuntos derivados
+                 , como novas tecnologias, campo de atuação,  empreendedorismo e
+                 todo assunto que seja importante para o desenvilvimento do colaborador.</p></li>
+              </ul><!-- list-unstyled -->
+           </div><!-- panel panel-default -->
+         </div><!-- col-md-3 -->
+
+         <div class="col-md-3">
+           <div class="panel panel-default">
+             <ul class='list-unstyled text-center padding'>
+                <li><h1 class='glyphicon glyphicon-search'></h1></li>
+                <li><h4><strong>Incentivo estudantil</strong></h4></li>
+                <li><p>Incentivamos o estudo de nossos colaboradores lhes oferecendo
+                 material didatico, em qualquer área que ele almeje obter conhecimento
+                 assim o capacitando cada vez mais na jornada em busca da realização
+                pessoal e profissional.</p></li>
+             </ul><!--list-unstyled -->
+           </div><!-- panel panel-default -->
+         </div><!-- col-md-3 -->
+
+         <div class="col-md-3">
+           <div class="panel panel-default">
+             <ul class='list-unstyled text-center padding'>
+                <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+                <li><h4><strong>Treinamentos</strong></h4></li>
+                <li><p>Oferecemos treinamento e especialização na área  de
+                trabalho, para que nossos colaboradores se tornem especialista
+                naquilo que fazem e entreguem valores e qualidades aos projetos
+                de nossos clientes.</p></li>
+             </ul><!-- list-unstyled -->
+           </div><!--panel panel-default -->
+         </div><!-- col-md-3 -->
+
+        <div class="col-md-3">
+          <div class="panel panel-default">
+            <ul class='list-unstyled text-center padding'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h4><strong>Eventos</strong></h4></li>
+               <li><p>Incentivamos nossos colaboradores a comparecerem a
+               eventos de tecnologia e empreendedorismo, assim os intruindo a
+               desenvolver seu proprio network estando assim um passo a frente na
+              realização pessoal & profissional nessa jornada.</p></li>
+            </ul><!-- list-unstyled <--></-->
+          </div><!--panel panel-default -->
+        </div><!-- col-md-3 -->
+
+        <div class="col-md-3">
+          <div class="panel panel-default">
+            <ul class='list-unstyled text-center padding'>
+              <li><h1 class='glyphicon glyphicon-search'></h1></li>
+              <li><h4><strong>Formação financiada</strong><h4></li>
+              <li><p>Financiamos a formação de nossos colaboradores de acordo
+              com os créditos obtidos na empresa pro inovações na área de trabalho
+              , compromisso com o mesma e participação em palestras e dojos.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='poliglot'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled text-center'>
+           <li><h2><strong>POLIGLOTA</strong></h2></li>
+           <li><p>Torne-se um poliglota e converse com o mundo todo.</p></li>
+           <li><hr></li>
+        </ul><!-- list-unstyled -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h4><strong>INGLÊS</strong></h4></li>
+               <li><p>Aprenda a falar em inglês.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h4><strong>FRANCÊS</strong></h4></li>
+               <li><p>Aprenda a falar em frances.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h4><strong>ALEMÃO</strong></h4></li>
+               <li><p>Aprenda a falar em alemão.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+              <li><h1 class='glyphicon glyphicon-search'></h1></li>
+              <li><h4><strong>ESPANHOL</strong></h4></li>
+              <li><p>Aprenda a falar em espanhol.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h4><strong>PORTUGUÊS</strong></h4></li>
+               <li><p>Aprenda a falar em português.</p></li>
+            </ul><!--list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding text-center'>
+              <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+              <li><h4><strong>JAPÔNES</strong></h4></li>
+              <li><p>Aprenda a falar em japônes.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!--panel panel-default -->
+        </div><!-- col-md-4 -->
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- poliglot -->
 
 <section id='contact'>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
 
-           <ul class='list-unstyled text-center'>
-               <li><h2> <i class='glyphicon glyphicon-search'></i> CONTATO</h2></li>
-               <li><p>Entre em contato conosco.</p></li>
-               <li><hr></li>
-           </ul><!-- list-unstyled -->
+         <ul class='list-unstyled text-center'>
+            <li><h2> <strong> <i class='glyphicon glyphicon-search'></i>
+              CONTATO </strong> </h2></li>
+            <li><p>Entre em contato conosco.</p></li>
+            <li><hr></li>
+         </ul><!-- list-unstyled -->
 
+        <div class="col-md-4">
+           <h4><strong>Sua opinião é importante para nós</strong></h4>
+           <p>Assim como a democracia é importante para o futuro de um pais
+           , a oponião de clientes tambem é de suma importancia para o crescimento e
+           desenvolvimento de uma empresa, deixe nos sua duvida, sugestão, criticas ou
+           elogios, responderemos o mais rápido possível.</p>
+        </div>
+
+         <div class='col-md-8'>
            <%= render partial: 'contact/form' %>
-
+        </div>
       </div>
     </div>
   </div>

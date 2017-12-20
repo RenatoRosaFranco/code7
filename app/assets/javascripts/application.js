@@ -37,7 +37,7 @@ app.controller('ClientsController', ['$http', '$log', function($http, $log){
     })
 }]);
 
-app.controller('MembersController', ['$http', '$log', function($http, $log){
+app.controller("MembersController", ['$http', '$log', function($http, $log){
    var code7even = this;
    code7even.members || [];
 
@@ -49,7 +49,7 @@ app.controller('MembersController', ['$http', '$log', function($http, $log){
      console.log(response.data);
   }).then(function (error){
      console.log(error);
- });
+  });
 }]);
 
 app.controller('ServicesController', ['$http', '$log', function($http, $log){
