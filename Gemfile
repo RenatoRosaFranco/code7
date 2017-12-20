@@ -47,6 +47,7 @@ group :development, :test do
   gem 'angularjs-rails'
   gem 'better_errors'
   gem 'devise'
+  gem 'rails_best_practices'
 end
 
 group :development do
