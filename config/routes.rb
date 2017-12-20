@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '//dashboard', as: 'rails_admin'
   # Authentication
   # @implemented
   devise_for :users

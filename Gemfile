@@ -51,6 +51,7 @@ group :development, :test do
   gem 'factory_bot'
   gem 'ffaker'
   gem 'rails_admin'
+  gem 'cancancan'
 end
 
 group :development do

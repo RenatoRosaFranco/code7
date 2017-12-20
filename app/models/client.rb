@@ -12,7 +12,7 @@ class Client < ApplicationRecord
             presence: true,
             uniqueness: false,
             allow_blank: false,
-            lenght: {minmum: 3, maximum: 400}
+            length: {minmum: 3, maximum: 400}
 
   validates :link,
             presence: true,
