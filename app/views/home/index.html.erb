@@ -1,5 +1,6 @@
 <% provide :title, "Home" %>
 
+<%= render partial: 'layouts/header'  %>
 
 <section id='home' class='jumbotron'>
   <div class="container">
@@ -8,9 +9,10 @@
           <ul class='list-unstyled text-center'>
              <li><h1>CODE7EVEN</h1></li>
              <li><p>Código rápido e eficaz para seu negócio.</p></li>
-             <ul class='list-unstyled'>
-                <li><%=  link_to 'Home', '', class: 'btn btn-primary btn-lg top' %></li>
-             </ul>
+             <ul class='list-unstyled list-inline'>
+                <li><%=  link_to 'Home',    '', class: 'btn btn-primary btn-lg top' %></li>
+                <li><%=  link_to 'Contato', '', class: 'btn btn-primary btn-lg top' %></li>
+              </ul>
           </ul><!-- list-unstyled -->
       </div><!-- col-md-12 -->
     </div><!-- row -->
@@ -22,7 +24,7 @@
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled'>
-           <li><h2><strong>EMPRESA</strong></h2></li>
+           <li><h2><strong><i class='glyphicon glyphicon-search'></i> EMPRESA</strong></h2></li>
            <li><p>Conheça a nossa empresa.</p></li>
            <li><hr></li>
         </ul><!-- list-unstyled -->
@@ -38,7 +40,7 @@
         </p>
 
         <ul class='list-unstyled text-center'>
-           <li><h2><strong>VALORES</strong></h2></li>
+           <li><h2><strong><i class='glyphicon glyphicon-search'></i> VALORES</strong></h2></li>
            <li>Conheça os valores que torna a nossa empresa única.</li>
            <li><hr></li>
         </ul><!-- list-unstyled -->
@@ -113,7 +115,7 @@
     <div class="row">
       <div class="col-md-12">
           <ul class='list-unstyled text-center'>
-             <li><h2><strong>SERVIÇOS</strong></h2></li>
+             <li><h2><strong><i class='glyphicon glyphicon-search'></i> SERVIÇOS</strong></h2></li>
              <li><p>Nós temos a solução ideal para você.</p></li>
              <li><hr></li>
           </ul><!-- list-unstyled -->
@@ -140,7 +142,7 @@
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled text-center'>
-          <li><h2><strong>Equipe</strong></h2></li>
+          <li><h2><strong><i class='glyphicon glyphicon-search'></i> EQUIPE</strong></h2></li>
           <li><p>Os melhores profissionais trabalhando por você.</p></li>
           <li><hr></li>
         </ul><!-- list-unstyled -->
@@ -177,7 +179,7 @@
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled text-center'>
-           <li><h1><strong>OCTA7</strong></h1></li>
+           <li><h2><strong><i class='glyphicon glyphicon-search'></i> OCTA7</strong></h2></li>
            <li><p>Temos as melhores soluções mobile para você.</p></li>
            <li><hr></li>
         </ul><!-- list-unstyled -->
@@ -185,7 +187,7 @@
         <div class="col-md-4">
           <div class="panel panel-default">
             <ul class='list-unstyled padding'>
-               <li><h4><strong>Estrátegia Digital</strong></h4></li>
+               <li><h4><strong>ESTRÁTEGIA DIGITAL</strong></h4></li>
                <li><p>Desenvolvemos toda a campanha visual e
                digital para seu produto mobile ou web.</p></li>
             </ul><!-- list-unstyled -->
@@ -195,7 +197,7 @@
         <div class="col-md-4">
           <div class="panel panel-default">
             <ul class='list-unstyled padding'>
-               <li><h4><strong>Desenvolvimento</strong></h4></li>
+               <li><h4><strong>DESENVOLVIMENTO</strong></h4></li>
                <li><p>Desenvolvemos soluções em aplicativos mobile
                  para Android, IOS e Windows phone.</p></li>
             </ul><!-- list-unstyled -->
@@ -310,20 +312,20 @@
               <li><p>Financiamos a formação de nossos colaboradores de acordo
               com os créditos obtidos na empresa pro inovações na área de trabalho
               , compromisso com o mesma e participação em palestras e dojos.</p></li>
-            </ul>
+            </ul><!-- list-unstyled -->
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- labs -->
 
 <section id='poliglot'>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled text-center'>
-           <li><h2><strong>POLIGLOTA</strong></h2></li>
+           <li><h2><strong><i class='glyphicon glyphicon-search'></i> POLIGLOTA</strong></h2></li>
            <li><p>Torne-se um poliglota e converse com o mundo todo.</p></li>
            <li><hr></li>
         </ul><!-- list-unstyled -->
@@ -447,3 +449,5 @@
     </div>
   </div>
 </section>
+
+<%= render partial: 'layouts/footer' %>

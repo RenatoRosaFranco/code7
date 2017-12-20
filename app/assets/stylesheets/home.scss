@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .home {
+   position: relative;
+   font-size: 16px;
 
   .padding {
    position: relative;
@@ -32,6 +34,14 @@
         resize: none;
       }
     }
+  }
+
+  // Footer
+  footer {
+   position: relative;
+   margin-top: 50px;
+   margin-bottom: 0px;
+   padding-bottom: 50px;
   }
 
 }
