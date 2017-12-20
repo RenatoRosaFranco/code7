@@ -45,6 +45,8 @@ group :development, :test do
   gem 'jquery-rails'
   gem 'bootstrap-sass'
   gem 'angularjs-rails'
+  gem 'better_errors'
+  gem 'devise'
 end
 
 group :development do
