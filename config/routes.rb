@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       with_options only: :index do |list|
         list.resources :clients
+        list.resources :partners
         list.resources :services
         list.resources :members
       end

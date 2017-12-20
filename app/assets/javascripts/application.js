@@ -52,6 +52,21 @@ app.controller("MembersController", ['$http', '$log', function($http, $log){
   });
 }]);
 
+app.controller('PartnersController', ['$http', '$log', function($http, $log){
+    var code7even = this;
+    code7even.partners = [];
+
+    $http({
+      url: 'api/v1/patners/json',
+      method: 'GET'
+    }).then(function (response){
+      code7even.services = response.data;
+      console.log(response.data);
+    }).then(function (error){
+      console.log(error);
+    });
+}]);
+
 app.controller('ServicesController', ['$http', '$log', function($http, $log){
   var code7even = this;
   code7even.members || [];
