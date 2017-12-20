@@ -52,6 +52,7 @@ group :development, :test do
   gem 'ffaker'
   gem 'rails_admin'
   gem 'cancancan'
+  gem 'simplecov'
 end
 
 group :development do
