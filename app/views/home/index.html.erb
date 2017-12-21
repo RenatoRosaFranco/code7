@@ -10,8 +10,8 @@
              <li><h1>CODE7EVEN</h1></li>
              <li><p>Código rápido e eficaz para seu negócio.</p></li>
              <ul class='list-unstyled list-inline'>
-                <li><%=  link_to 'Home',    '', class: 'btn btn-primary btn-lg top' %></li>
-                <li><%=  link_to 'Contato', '', class: 'btn btn-primary btn-lg top' %></li>
+                <li><%=  link_to 'Serviços', '#services', class: 'btn btn-primary btn-lg top' %></li>
+                <li><%=  link_to 'Contato',  '#contact',  class: 'btn btn-primary btn-lg top' %></li>
               </ul>
           </ul><!-- list-unstyled -->
       </div><!-- col-md-12 -->
@@ -31,8 +31,8 @@
 
         <p>
           A <strong>CODE7EVEN</strong> surgiu de uma startup facultativa, no inicio
-          era apenas um projeto de agencia digital, hoje tornou-se um Software House
-          que propoõem a seus clientes as melhores soluções no campo da tecnologia a
+          era apenas um projeto de agencia digital, hoje tornou-se um <strong>Software House</strong>
+          que propõem a seus clientes as melhores soluções no campo da tecnologia a
           um preço acessivel. Não nos limitando apenas ao atendimento a clientes locais
           , também atendemos clientes no exterior, nossas soluções são implementadas através
           da agilidade, qualidade, e praticidade assim propondo a nossos clientes um serviço
@@ -229,11 +229,49 @@
   </div>
 </section>
 
+<section id='news' ng-controller='PostsController as postCtrl'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <ul class='list-unstyled text-center'>
+             <li><h2><strong> <i class='glyphicon glyphicon-search'></i> NOVIDADES</strong></h2></li>
+             <li><p>acompanhe nossas novidades.</p></li>
+             <li><hr></li>
+          </ul><!-- list-unstyled -->
+
+          <div class="col-md-5">
+              <h4><strong> <i class='glyphicon glyphicon-search'></i>
+              MANTENHA-SE ATUALIZADO</strong></h4>
+              <p>Insceva-se em nossa newsletter e receba<br> todas as nossas
+              atualizações mensais<br> automaticamente em seu e-mail.</p>
+              <hr>
+
+              <%= render 'newsletter/form' %>
+          </div>
+
+          <div class="col-md-7">
+            <div class="post col-md-4" ng-repeat='post in postCtrl.posts'>
+              <div class="panel panel-default padding">
+                 <ul class='list-unstyled'>
+                    <li><h4>{{ post.title }}</h4></li>
+                    <li><p>{{ post.description }}</p></li>
+                 </ul><!-- list-unstyled -->
+              </div><!-- panel panel-default -->
+            </div><!-- post -->
+          </div><!-- col-md-7 -->
+
+
+      </div><!--  col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</section><!-- row -->
+
 <section id='labs'>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
          <ul class='list-unstyled text-center'>
+            <li><h1><i class='glyphicon glyphicon-searchp'></i></h1></li>
             <li><h2><strong>CODE7 LABS</strong></h2></li>
             <li><p>Você procura uma carreia promissora?, podemos lhe ajudar a chegar lá.</p></li>
             <li><hr></li>
@@ -405,7 +443,7 @@
           </ul><!-- list-unstyled -->
 
           <div class="col-md-4">
-             <h4><strong>A UNIÃO TRAS O DESENVOLVIMENTO</strong></h4>
+             <h4><strong>A UNIÃO TRÁS O DESENVOLVIMENTO</strong></h4>
              <p>Toda grande empresa conta com parceiros, para que juntos cheguem
              ao topo da excêlencia e praticidade nos serviços prestados a seus clientes
              , Aqui estão nossos parceiros, que como nossos clientes também acreditam
