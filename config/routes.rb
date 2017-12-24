@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   resource  :newsletter, only: [:create]
   resource  :contact, only: [:create]
 
+  # Dashboard
+  # @implemented
+  namespace :dashboard do
+    get '', to: 'home#index'
+  end
+
   # API
   # @implemented
   namespace :api, constraints: { subdomain: 'api' } do
