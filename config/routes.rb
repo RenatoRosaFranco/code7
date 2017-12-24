@@ -21,6 +21,7 @@ Rails.application.routes.draw do
         list.resources :partners
         list.resources :posts
         list.resources :services
+        list.resources :technologies
       end
     end
   end

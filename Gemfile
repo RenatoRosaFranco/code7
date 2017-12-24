@@ -53,7 +53,8 @@ group :development, :test do
   gem 'rails_admin'
   gem 'cancancan'
   gem 'simplecov'
-  gem 'pg'
+  gem 'carrierwave'
+  # gem 'pg'
 end
 
 group :development do
