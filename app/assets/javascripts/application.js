@@ -17,85 +17,26 @@
 //= require_tree .
 
 var app = angular.module('app', []);
-app.controller('ApplicationController', function(){
 
-});
+app.controller('ApplicationController', ['$http', '$log', function($http, $log){
 
-app.controller('ClientsController', ['$http', '$log', function($http, $log){
-    var code7even = this;
-    code7even.members || [];
-
-    $http({
-        url: 'api/v1/clients.json',
-        method: 'GET'
-    }).then(function (response){
-      code7even.members = response.data
-      console.log(response.data);
-    }).then(function (error){
-      console.log(error);
-    })
 }]);
 
-app.controller("MembersController", ['$http', '$log', function($http, $log){
-   var code7even = this;
-   code7even.members || [];
-
-   $http({
-     url: 'api/v1/members.json',
-     method: 'GET'
-   }).then(function (response){
-     code7even.members = response.data;
-     console.log(response.data);
-  }).then(function (error){
-     console.log(error);
-  });
-}]);
-
-app.controller('NewsletterController', ['$scope, $http', '$log', function($http, $scope, $log){
-  var code7even = this;
-}]);
-
-app.controller('PartnersController', ['$http', '$log', function($http, $log){
-    var code7even = this;
-    code7even.partners || [];
-
-    $http({
-      url: 'api/v1/patners/json',
-      method: 'GET'
-    }).then(function (response){
-      code7even.services = response.data;
-      console.log(response.data);
-    }).then(function (error){
-      console.log(error);
-    });
-}]);
-
-app.controller('PostsController', ['$http', '$log', function($http, $log){
-  var code7eeven = this;
-  code7even.posts || [];
-
-  $http({
-    url: 'api/v1/posts.json'
-    method: 'GET'
-  }).then(function (response){
-    code7even.posts = response.data;
-    console.log(response.data);
-  }).then(function (error){
-    console.log(error);
-  });
+app.controller('MembersController', ['$http', '$log', function($http, $log){
+  
 }]);
 
 app.controller('ServicesController', ['$http', '$log', function($http, $log){
   var code7even = this;
-  code7even.members || [];
+  code7even.services || [];
 
   $http({
     url: 'api/v1/services.json',
     method: 'GET'
-  }).then(function (response){
+  }).then(function sucessCallback(response){
     code7even.services = response.data;
-    console.log(response.data);
-  }).then(function (error){
+    console.log(services.data);
+  }).then(function errorCallback(error){
     console.log(error);
   });
 }]);

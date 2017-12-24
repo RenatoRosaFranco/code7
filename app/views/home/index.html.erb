@@ -141,11 +141,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <ul class='list-unstyled text-center'>
-          <li><h2><strong><i class='glyphicon glyphicon-search'></i> EQUIPE</strong></h2></li>
-          <li><p>Os melhores profissionais trabalhando por você.</p></li>
-          <li><hr></li>
-        </ul><!-- list-unstyled -->
+
+       <div class='col-md-9 col-md-offset-1'>
+         <ul class='list-unstyled text-center'>
+           <li><h2><strong>UMA EQUIPE PREPARADA PARA TE<br> AJUDAR A TOMAR
+           AS DECISÕES CERTAS!</strong></h2></li>
+           <li><hr></li>
+          </ul><!-- list-unstyled -->
+        </div><!-- col-md-9 -->
 
         <div class="col-md-4">
              <h4><strong>Seu projeto em boas mãos</strong></h4>
@@ -169,6 +172,35 @@
                </div><!--  panel panel-default -->
             </div><!-- col-md-4 -->
         </div><!-- col-md-8 -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="technology" ng-controller='TechnologyController as techCtrl'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+       <div class='col-md-9 col-md-offset-2'>
+        <ul class='list-unstyled'>
+          <li><h2><strong>O PODER DAS MELHORES TECNOLOGIAS<br> EM SUAS MÃOS</strong></h2></li>
+          <li><p>Oferecemos a nossos clientes soluções eficases para seus
+          problemas fazendo uso das ultimas tecnologias do mercado, buscando
+          assim performance, funcionalidade e uma boa experiencia de usuario.<p></li>
+          <li><hr></li>
+        </ul>
+       </div>
+
+        <div class="tech col-md-4" ng-repeat='tech in techCtrl.technologies'>
+          <div class="panel panel-default">
+            <ul class='list-unstyled padding'>
+              <li><h4>{{ tech.name }}</h4></li>
+              <li><p>{{ tech.description }}</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- panel panel-default -->
+        </div><!-- col-md-4 -->
+
       </div>
     </div>
   </div>
