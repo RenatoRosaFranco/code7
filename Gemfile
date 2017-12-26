@@ -38,22 +38,37 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  # Use selenium-webdriver as testing tool
   gem 'selenium-webdriver'
+  # Use rspec-rails as test framework
   gem 'rspec-rails'
-  gem 'cucumber'
+  # Use responders as respond formats
   gem 'responders'
+  # Use jquery-rails as jquery
   gem 'jquery-rails'
+  # Use bootstrap-sass as bootstrap
   gem 'bootstrap-sass'
+  # Use angularjs as Angular framework
   gem 'angularjs-rails'
+  # Use better errors as better error display
   gem 'better_errors'
+  # Use devise as authentication
   gem 'devise'
+  # Use rails_best_partices to best_practices
   gem 'rails_best_practices'
+  # Use factory_bot as factory data
   gem 'factory_bot'
+  # User ffaker to generate fake data
   gem 'ffaker'
+  # Use rails admin as admin panel
   gem 'rails_admin'
-  gem 'cancancan'
+  # Use Pundit as authorization
+  gem 'pundit'
+  # Use simplecov as code coverage
   gem 'simplecov'
+  # Use carrerwave as file uploader
   gem 'carrierwave'
+  # Use pg as database, :only => :heroku
   # gem 'pg'
 end
 
