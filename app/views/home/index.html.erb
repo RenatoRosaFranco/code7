@@ -126,7 +126,7 @@
                    <img ng-src="{{ service.logo }}">
                 </div>
                 <div class="media-body">
-                    <h4 class='media-header'>{{ service.name }}</h4>
+                    <a href=''><h4 class='media-header'>{{ service.name }}</h4></a>
                     <p>{{ service.description }}</p>
                 </div>
              </div>
@@ -162,12 +162,13 @@
         </div><!-- col-md-4 -->
 
         <div class="col-md-8">
-            <div class=".member col-md-4" ng-controller='member in memberCtrl.members'>
+            <div class=".member col-md-4" ng-repeat='member in memberCtrl.members'>
                <div class="panel panel-default">
                   <ul class='list-unstyled padding'>
-                     <li><h4>{{ member.name }}</h4></li>
-                     <li>{{ member.role }}</li>
-                     <li><p>{{ member.description }}</p></li>
+                     <li><img ng-src="{{ member.avatar }}"></li>
+                     <li><a href=''><h4>{{ member.name }}</h4></a></li>
+                     <li><span class='badge'>{{ member.role }}</span></li>
+                     <li><small>{{ member.description }}</small></li>
                   </ul><!-- list-unstyled -->
                </div><!--  panel panel-default -->
             </div><!-- col-md-4 -->
@@ -192,10 +193,11 @@
         </ul>
        </div>
 
-        <div class="tech col-md-4" ng-repeat='tech in techCtrl.technologies'>
+        <div class="tech col-md-3" ng-repeat='tech in techCtrl.technologies'>
           <div class="panel panel-default">
-            <ul class='list-unstyled padding'>
-              <li><h4>{{ tech.name }}</h4></li>
+            <ul class='list-unstyled text-center padding'>
+              <li><img ng-src="{{ tech.logo }}"></li>
+              <li><a href=''><h4>{{ tech.name }}</h4></a></li>
               <li><p>{{ tech.description }}</p></li>
             </ul><!-- list-unstyled -->
           </div><!-- panel panel-default -->
@@ -211,15 +213,16 @@
     <div class="row">
       <div class="col-md-12">
         <ul class='list-unstyled text-center'>
-           <li><h2><strong><i class='glyphicon glyphicon-search'></i> OCTA7</strong></h2></li>
-           <li><p>Temos as melhores soluções mobile para você.</p></li>
+           <li><h1><strong><i class='glyphicon glyphicon-search'></i> OCTA7</strong></h1></li>
+           <li><p>Temos as melhores soluções <u>mobile</u> para você.</p></li>
            <li><hr></li>
         </ul><!-- list-unstyled -->
 
         <div class="col-md-4">
           <div class="panel panel-default">
-          <ul class='list-unstyled padding'>
-               <li><h4><strong>ESTRÁTEGIA DIGITAL</strong></h4></li>
+          <ul class='list-unstyled  text-center padding'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h3><strong>ESTRÁTEGIA DIGITAL</strong></h3></li>
                <li><p>Desenvolvemos toda a campanha visual e
                digital para seu produto mobile ou web.</p></li>
             </ul><!-- list-unstyled -->
@@ -228,8 +231,9 @@
 
         <div class="col-md-4">
           <div class="panel panel-default">
-            <ul class='list-unstyled padding'>
-               <li><h4><strong>DESENVOLVIMENTO</strong></h4></li>
+            <ul class='list-unstyled  text-center padding'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h3><strong>DESENVOLVIMENTO</strong></h3></li>
                <li><p>Desenvolvemos soluções em aplicativos mobile
                  para Android, IOS e Windows phone.</p></li>
             </ul><!-- list-unstyled -->
@@ -238,8 +242,9 @@
 
         <div class="col-md-4">
           <div class="panel panel-default">
-            <ul class='list-unstyled padding'>
-               <li><h4><strong>UX | UI</strong></h4></li>
+            <ul class='list-unstyled text-center padding'>
+               <li><h1><i class='glyphicon glyphicon-search'></i></h1></li>
+               <li><h3><strong>UX | UI</strong></h3></li>
                <li><p>Projetamos uma expêriencia de usuario que vai
                  alem do bom funcionamento de aplicações.</p></li>
             </ul><!-- list-unstyled -->
@@ -247,7 +252,7 @@
         </div><!-- col-md-4 -->
 
         <div class="col-md-6 col-md-offset-3">
-          <div class="panel panel-default">
+          <div class="panel text-center panel-default">
             <ul class='list-unstyled padding text-center'>
                <li><h3><strong>SEU PRODUTO WEB EM QUALQUER LUGAR</strong></h3></li>
                <li><p>Seja em computadores, notebooks, tablets & celulares

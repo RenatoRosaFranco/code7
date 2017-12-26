@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   # API
   # @implemented
-  namespace :api, constraints: { subdomain: 'api' } do
+  namespace :api, path: '', constraint: { subdomain: 'api' } do
     namespace :v1 do
       with_options only: :index do |list|
         list.resources :clients

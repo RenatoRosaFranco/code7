@@ -1,3 +1,4 @@
+# utf-8
 class Client < ApplicationRecord
   self.table_name = 'clients'
   self.primary_key = 'id'
@@ -6,17 +7,17 @@ class Client < ApplicationRecord
             presence: true,
             uniqueness: false,
             allow_blank: false,
-            length: {minimum: 3, maximum: 30}
+            length: { minimum: 3, maximum: 30 }
 
   validates :description,
             presence: true,
             uniqueness: false,
             allow_blank: false,
-            length: {minmum: 3, maximum: 400}
+            length: { minmum: 3, maximum: 400 }
 
   validates :link,
             presence: true,
             uiqueness: false,
             allow_blank: false,
-            length: {minimum: 3, maximum: 245}
+            length: { minimum: 3, maximum: 245 }
 end

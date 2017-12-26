@@ -1,3 +1,4 @@
+# utf-8
 class Technology < ApplicationRecord
   self.table_name  = 'technologies'
   self.primary_key = 'id'
@@ -8,18 +9,17 @@ class Technology < ApplicationRecord
             presence: true,
             uniqueness: false,
             allow_blank: false,
-            length: {minimum: 3, maximum: 30}
+            length: { minimum: 3, maximum: 30 }
 
   validates :description,
             presence: true,
             uniqueness: false,
             allow_blank: false,
-            length: {minimum: 3, maximum: 400}
+            length: { minimum: 3, maximum: 400 }
 
   validates :user_id,
             presence: true,
             uniqueness: false,
             allow_blank: false,
-            numericality: {only_integer: true}
-
+            numericality: { only_integer: true }
 end

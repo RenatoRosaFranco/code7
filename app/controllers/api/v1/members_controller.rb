@@ -1,7 +1,12 @@
-class API::V1::MembersController < ApplicationController
-  respond_to :json, :js
-  def index
-    members = Member.all
-    render json: members, only: [:name, :description, :role]
+module API
+  module V1
+    # utf-8
+    class MembersController < ApplicationController
+      respond_to :json, :js
+      def index
+        members = Member.all
+        render json: members, only: %I[name description role]
+      end
+    end
   end
 end
