@@ -70,6 +70,10 @@ group :development, :test do
   gem 'carrierwave'
   # Use pg as database, :only => :heroku
   # gem 'pg'
+  # Use pry-rails as terminal 
+  gem 'pry-rails'
+  # Use pry-byebug as debbuger
+  gem 'pry-byebug'
 end
 
 group :development do
