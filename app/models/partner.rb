@@ -3,6 +3,8 @@ class Partner < ApplicationRecord
   self.table_name = 'partners'
   self.primary_key = 'id'
 
+  mount_uploader :logo, FileUploader
+
   validates :name,
             presence: true,
             uniqueness: false,

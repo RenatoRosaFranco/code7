@@ -8,7 +8,8 @@
    font-size: 16px;
 
   .navbar-default {
-    background-color: #EEE;
+    background-color: #000;
+    border: none !important;
     a {
       position: relative;
       text-transform: uppercase;
@@ -22,29 +23,51 @@
 
   #home {
     position: relative;
-    height: 500px;
+    height: 590px;
+    background-color: #000;
+    color: #FFF;
     ul:nth-child(1)
     {
       position: relative;
-      margin-top: 120px;
-      a {
-        width: 150px;
-        position: relative;
-        padding: 12px;
-        border-radius: 25px;
-        background-color: inherit;
-        color: #337ab7;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: bold;
-        transition: 0.50s;
-        &.over, &:hover {
-          color: #FFF;
-          border: 1px solid #337ab7;
-          background-color: #337ab7;
-          transition: 0.50s;
-        }
+      margin-top: 160px;
+      h1 {
+       position: relative;
+       font-size: 70px !important;
+       color: #cbdb2a;
       }
+      h4{
+       color: #222;
+       position: relative;
+       font-weight: bold;
+       font-size: 17px !important;
+       text-transform: uppercase;
+      }
+      p {
+       position: relative;
+       font-weight: bold;
+       font-size: 22px;
+       color: #222;
+      }
+    }
+  }
+
+  #about{
+    color: #999;
+    h2, h1 {
+     position: relative;
+     color: #cbdb2a;
+    }
+    h4 {
+     position: relative;
+     color: #cbdb2a;
+     &:before {
+      content: '- ';
+      color: blue;
+     }
+     &:after {
+      content: ' -';
+      color: red;
+     }
     }
   }
 
@@ -57,33 +80,139 @@
     position: relative;
     margin-top: 10px;
   }
+  
+  // Services
+  #services {
+   position: relative;
+   background-color: #cbdb2a;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   margin-top: 50px;
+   margin-bottom: 50px;
+    .service {
+      position: relative;
+      margin-bottom: 8px;
 
+      i {
+       position: relative;
+       font-size: 24px !important;
+      }
+      .media-header {
+       position: relative;
+       text-transform: uppercase !important;
+       font-size: 17px !important;
+       font-weight: bold !important;
+      }
+    }
+  }
+
+  // Members
+  #members {
+    .avatar {
+     position: relative;
+     width: 124px;
+     height: 124px;
+     border-radius: 124px;
+     transition: 0.50s;
+     &:hover, &.over {
+      opacity: 0.70;
+      trasition: 0.50s;
+      cursor: pointer;
+     }
+    }
+  }
+  
+  // Contact 
   #contact {
+    position: relative;
+    h2, h5 { 
+     position: relative;
+     color: #cbdb2a;
+     text-transform: uppercase !important;
+    }
+    h5 {
+     font-size: 17px;
+    }
+    p{
+     position: relative;
+    }
+
     form {
       .input-group-addon {
-        position: relative;
-        border-right: none;
-        background-color: #FFF;
+       position: relative;
+       border-right: none;
+       background-color: #FFF;
+       border-top: none! important;
+       border-left: none !important;
+       border-right: none !important;
+       border-bottom: 2px solid #CCC;
       }
       input[type=email],input[type=text], input[type=tel]{
        position: relative;
-       height: 40px;
-       border-left: none;
+       height: 44px;
+       border-top: none !important;
+       border-left: none !important;
+       border-right: none !important;
+       border-bottom: 2px solid #CCC;
+       transition: 0.50s;
+       &:focus, &.focus {
+        position: relative;
+        border-bottom: 2px solid #cbdb2a;
+        transition: 0.50s;
+       }
       }
       textarea {
         position: relative;
+        border-left:  none !important;
+        border-right: none !important;
+        border-top:   none !important;
+        border-bottom: 2px solid #CCC;
         height: 140px;
         resize: none;
+        transition: 0.50s;
+        &:focus, &.focus {
+         position: relative;
+         border-bottom: 2px solid #cbdb2a;
+         transition: 0.50s;
+        }
+      }
+      input[type=submit] {
+       position: relative;
+       border: 1px solid #cbdb2a;
+       color: #cbdb2a;
+       background-color: inherit;
+       border-radius: 0px;
+       padding: 15px;
+       text-transform: uppercase;
+       font-weight: bold;
+       transition: 0.50s;
+       &.hover, &:hover {
+        position: relative;
+        cursor: pointer;
+        background-color: #cbdb2a;
+        border: 1px solid #cbdb2a;
+        color: #FFF;
+        transition: 0.50s;
+       }
       }
     }
   }
 
   // Footer
   footer {
+   background-color: #000;
    position: relative;
    margin-top: 50px;
    margin-bottom: 0px;
    padding-bottom: 50px;
+   h2, h4 {
+    position: relative;
+    color: #cbdb2a;
+   }
+   p{
+    position: relative;
+    color: #FFF;
+   }
   }
 
 }

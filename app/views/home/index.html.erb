@@ -6,14 +6,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-          <ul class='list-unstyled text-center'>
-             <li><h1>CODE7EVEN</h1></li>
-             <li><p>Código rápido e eficaz para seu negócio.</p></li>
-             <ul class='list-unstyled list-inline'>
-                <li><%=  link_to 'Serviços', '#services', class: 'btn btn-primary btn-lg top' %></li>
-                <li><%=  link_to 'Contato',  '#contact',  class: 'btn btn-primary btn-lg top' %></li>
-              </ul>
-          </ul><!-- list-unstyled -->
+        <div class='row'>
+          <div class='col-md-12'>
+            <ul class='list-unstyled'>
+              <li><h4>Nós somos a code7even</h4></li>
+              <li><h1>We construct a better world</h1></li>
+              <li><p>CODE7EVEN é uma sofware house focada em<br>
+              desenvolvimento web e mobile.</p></li>
+            </ul><!-- list-unstyled -->
+          </div><!-- col-md-12 -->
+        </div><!-- row -->
       </div><!-- col-md-12 -->
     </div><!-- row -->
   </div><!-- container -->
@@ -117,21 +119,21 @@
           <ul class='list-unstyled text-center'>
              <li><h2><strong><i class='glyphicon glyphicon-search'></i> SERVIÇOS</strong></h2></li>
              <li><p>Nós temos a solução ideal para você.</p></li>
-             <li><hr></li>
           </ul><!-- list-unstyled -->
 
+         <div class='row' style='margin-top: 30px; margin-bottom: 30px;'>
           <div ng-repeat='service in serviceCtrl.services' class="service col-md-4">
-             <div class="media panel panel-default">
+             <div class="media">
                 <div class="media-middle media-left">
-                   <img ng-src="{{ service.logo }}">
+                   <i class='glyphicon glyphicon-search'></i>
                 </div>
                 <div class="media-body">
                     <a href=''><h4 class='media-header'>{{ service.name }}</h4></a>
-                    <p>{{ service.description }}</p>
+                    <p>{{ service.description | limitTo: 30 }}</p>
                 </div>
              </div>
           </div>
-
+        </div><!-- row -->
       </div><!-- col-md-12 -->
     </div><!-- row -->
   </div><!-- container -->
@@ -164,8 +166,8 @@
         <div class="col-md-8">
             <div class=".member col-md-4" ng-repeat='member in memberCtrl.members'>
                <div class="panel panel-default">
-                  <ul class='list-unstyled padding'>
-                     <li><img ng-src="{{ member.avatar }}"></li>
+                  <ul class='list-unstyled text-center padding'>
+                     <li><img class='avatar' ng-src="{{ member.avatar['url'] }}"></li>
                      <li><a href=''><h4>{{ member.name }}</h4></a></li>
                      <li><span class='badge'>{{ member.role }}</span></li>
                      <li><small>{{ member.description }}</small></li>
@@ -510,7 +512,7 @@
          </ul><!-- list-unstyled -->
 
         <div class="col-md-4">
-           <h4><strong>Sua opinião é importante para nós</strong></h4>
+           <h5><strong>Sua opinião é importante para nós</strong></h5>
            <p>Assim como a democracia é importante para o futuro de um pais
            , a oponião de clientes tambem é de suma importancia para o crescimento e
            desenvolvimento de uma empresa, deixe nos sua duvida, sugestão, criticas ou

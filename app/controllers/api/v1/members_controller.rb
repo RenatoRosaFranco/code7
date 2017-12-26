@@ -5,7 +5,7 @@ module API
       respond_to :json, :js
       def index
         members = Member.all
-        render json: members, only: %I[name description role]
+        render json: members, only: %I[avatar name description role]
       end
     end
   end

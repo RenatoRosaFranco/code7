@@ -3,6 +3,8 @@ class Client < ApplicationRecord
   self.table_name = 'clients'
   self.primary_key = 'id'
 
+  mount_uploader :logo, FileUploader
+
   validates :name,
             presence: true,
             uniqueness: false,
