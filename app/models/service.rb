@@ -3,6 +3,8 @@ class Service < ApplicationRecord
   self.table_name = 'services'
   self.primary_key = 'id'
 
+  belongs_to :user
+
   validates :name,
             presence: true,
             uniqueness: false,

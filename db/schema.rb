@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171226205533) do
+ActiveRecord::Schema.define(version: 20171226210544) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20171226205533) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "logo"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_clients_on_user_id"
   end
 
   create_table "members", force: :cascade do |t|
@@ -28,6 +30,8 @@ ActiveRecord::Schema.define(version: 20171226205533) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_members_on_user_id"
   end
 
   create_table "newsletters", force: :cascade do |t|
@@ -47,6 +51,8 @@ ActiveRecord::Schema.define(version: 20171226205533) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "logo"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_partners_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -67,6 +73,8 @@ ActiveRecord::Schema.define(version: 20171226205533) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_services_on_user_id"
   end
 
   create_table "technologies", force: :cascade do |t|

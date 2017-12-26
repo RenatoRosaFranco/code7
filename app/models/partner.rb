@@ -3,6 +3,7 @@ class Partner < ApplicationRecord
   self.table_name = 'partners'
   self.primary_key = 'id'
 
+  belongs_to :user
   mount_uploader :logo, FileUploader
 
   validates :name,

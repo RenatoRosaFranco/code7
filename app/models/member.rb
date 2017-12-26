@@ -3,6 +3,7 @@ class Member < ApplicationRecord
   self.table_name = 'members'
   self.primary_key = 'id'
 
+  belongs_to :user
   mount_uploader :avatar, FileUploader
 
   validates :name,
