@@ -57,7 +57,7 @@ group :development, :test do
   # Use rails_best_partices to best_practices
   gem 'rails_best_practices'
   # Use factory_bot as factory data
-  gem 'factory_bot'
+  gem 'factory_girl_rails'
   # User ffaker to generate fake data
   gem 'ffaker'
   # Use rails admin as admin panel
