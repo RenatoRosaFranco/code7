@@ -1,3 +1,1 @@
-NewsletterMailer#signup
-
-Hi, find me in app/views/newsletter_mailer/signup
+<%= @user.name %> Já esta indo embora?

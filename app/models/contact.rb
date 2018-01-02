@@ -3,8 +3,10 @@ class Contact
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  attr_reader :name, :phone, :email, :message
+  attr_accessor :name, :phone, :email, :message
 
+  # Initialize
+  # @implemented
   def initialize(params: {})
     @name = params[:name]
     @phone = params[:phone]
@@ -12,13 +14,15 @@ class Contact
     @message = params[:message]
   end
 
+  # data should be persisted?
+  # @implemented
   def persisted?
     false
   end
 
   def send_email
-    ContactMailer.sended(self).deliver_now
-    ContactMailer.received(self).deliver_now
+    Mailer.new(ContactMailer, :sended,   :deliver_now)
+    Mailer.new(ContactMailer, :received, :deliver_now)
   end
 
   validates :name,

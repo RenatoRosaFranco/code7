@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # RailsAdmin Engine
+  # @implemented
+  
   mount RailsAdmin::Engine => '/dashboard', as: 'rails_admin'
   # Authentication
   # @implemented

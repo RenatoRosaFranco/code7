@@ -3,6 +3,8 @@ class Client < ApplicationRecord
   self.table_name = 'clients'
   self.primary_key = 'id'
 
+  include Filterable
+
   belongs_to :user
   mount_uploader :logo, FileUploader
 

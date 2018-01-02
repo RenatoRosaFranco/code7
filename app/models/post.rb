@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   self.table_name = 'posts'
   self.primary_key = 'id'
 
+  include Filterable
+
   scope :published, -> { where(published: true) }
   scope :unpublished, -> { where(published: false) }
 
